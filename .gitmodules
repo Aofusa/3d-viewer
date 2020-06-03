@@ -1,0 +1,27 @@
+[submodule "vendor/artichoke"]
+	path = vendor/artichoke
+	url = git@github.com:artichoke/artichoke.git
+
+[submodule "vendor/blend"]
+	path = vendor/blend
+	url = git@github.com:lukebitts/blend.git
+
+[submodule "vendor/fbxcel"]
+	path = vendor/fbxcel
+	url = git@github.com:lo48576/fbxcel.git
+
+[submodule "vendor/gfx"]
+	path = vendor/gfx
+	url = git@github.com:gfx-rs/gfx.git
+
+[submodule "vendor/lucet"]
+	path = vendor/lucet
+	url = git@github.com:bytecodealliance/lucet.git
+
+[submodule "vendor/tract"]
+	path = vendor/tract
+	url = git@github.com:snipsco/tract.git
+
+[submodule "vendor/wgpu-rs"]
+	path = vendor/wgpu-rs
+	url = git@github.com:gfx-rs/wgpu-rs.git

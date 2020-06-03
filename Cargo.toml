@@ -1,0 +1,82 @@
+[package]
+name = "graphics-3d"
+version = "0.1.0"
+authors = ["Aofusa <5000enPCinAOFUSA@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[example]]
+name="ruby"
+path="test/ruby.rs"
+test = true
+
+[[example]]
+name="tensorflow"
+path="test/tensorflow.rs"
+test = true
+
+[[example]]
+name="graphics"
+path="test/graphics.rs"
+test = true
+
+[[example]]
+name="plugin"
+path="test/plugin.rs"
+test = true
+
+[[example]]
+name="blender"
+path="test/blender.rs"
+test = true
+
+[[example]]
+name="model"
+path="test/model.rs"
+test = true
+
+[dependencies]
+image = "0.23"
+bincode = "=1.2"
+nalgebra = "0.18"
+arrayvec = "0.5"
+futures = "0.3"
+smallvec = "1"
+raw-window-handle = "0.3"
+parking_lot = "0.10"
+libflate = "0.1"
+blend = "0.6"
+artichoke-core = { path = "vendor/artichoke/artichoke-core" }
+artichoke-backend = { path = "vendor/artichoke/artichoke-backend" }
+tract-tensorflow = { path = "vendor/tract/tensorflow" }
+wgpu = { path = "vendor/wgpu-rs" }
+lucet-runtime = { path = "vendor/lucet/lucet-runtime" }
+lucet-wasi = { path = "vendor/lucet/lucet-wasi" }
+
+[dev-dependencies]
+cgmath = "0.17"
+log = "0.4"
+png = "0.15"
+winit = { version = "0.22.1", features = ["web-sys"] }
+rand = { version = "0.7.2", features = ["wasm-bindgen"] }
+bytemuck = "1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc = "0.2.7"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+env_logger = "0.7"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies.wgc]
+package = "wgpu-core"
+version = "0.5"
+git = "https://github.com/gfx-rs/wgpu"
+rev = "a203333c3e144cfd431c812213966ee32ae59d98"
+features = ["raw-window-handle"]
+
+[dependencies.wgt]
+package = "wgpu-types"
+version = "0.5"
+git = "https://github.com/gfx-rs/wgpu"
+rev = "a203333c3e144cfd431c812213966ee32ae59d98"

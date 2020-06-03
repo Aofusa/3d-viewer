@@ -1,0 +1,4 @@
+model/**
+!.gitkeep
+!model/box
+!model/box/**
