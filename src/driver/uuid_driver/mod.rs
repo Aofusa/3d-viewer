@@ -11,3 +11,15 @@ impl IdRepository for UuidRepository {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn id_generate() {
+        let id_repository = UuidRepository {};
+        let id = id_repository.generate();
+        assert_eq!(id.id > 0, true);
+    }
+}
+
