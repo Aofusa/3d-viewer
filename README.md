@@ -1,4 +1,4 @@
-3D viewer
+3D graphics viewer
 =====
 
 
@@ -19,11 +19,14 @@ cargo run --example ruby
 # Tensorflow の推論モデルを実行する
 cargo run --example tensorflow
 
-# Window を描画し中に 3D グラフィックを描画する
-cargo run --example graphics
-
 # WebAssembly で作成されたファイルを読み込み実行する（要 Lucet）
 cargo run --example plugin
+
+# ID の生成
+cargo run --example uuid
+
+# Window を描画し中に 3D グラフィックを描画する
+cargo run --example graphics
 
 # .blend ファイルを読み込む（読み込むだけ）
 cargo run --example blender

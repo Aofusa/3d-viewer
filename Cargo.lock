@@ -1121,7 +1121,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9b919933a397b79c37e33b77bb2aa3dc8eb6e165ad809e58ff75bc7db2e34574"
 
 [[package]]
-name = "graphics-3d"
+name = "graphics"
 version = "0.1.0"
 dependencies = [
  "arrayvec 0.5.1",
@@ -1146,6 +1146,7 @@ dependencies = [
  "raw-window-handle",
  "serde",
  "smallvec",
+ "snowflake",
  "tract-tensorflow",
  "uuid",
  "wgpu",
@@ -2978,6 +2979,16 @@ dependencies = [
  "nix 0.14.1",
  "wayland-client",
  "wayland-protocols",
+]
+
+[[package]]
+name = "snowflake"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "27207bb65232eda1f588cf46db2fee75c0808d557f6b3cf19a75f5d6d7c94df1"
+dependencies = [
+ "serde",
+ "serde_derive",
 ]
 
 [[package]]

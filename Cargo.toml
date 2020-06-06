@@ -1,5 +1,5 @@
 [package]
-name = "graphics-3d"
+name = "graphics"
 version = "0.1.0"
 authors = ["Aofusa <5000enPCinAOFUSA@gmail.com>"]
 edition = "2018"
@@ -25,13 +25,18 @@ path="test/tensorflow.rs"
 test = true
 
 [[example]]
-name="graphics"
-path="test/graphics.rs"
+name="plugin"
+path="test/plugin.rs"
 test = true
 
 [[example]]
-name="plugin"
-path="test/plugin.rs"
+name="uuid"
+path="test/uuid.rs"
+test = true
+
+[[example]]
+name="graphics"
+path="test/graphics.rs"
 test = true
 
 [[example]]
@@ -47,6 +52,7 @@ test = true
 [dependencies]
 serde = "1"
 uuid = { version = "0.8", features = ["serde", "v4"], default-features = false }
+snowflake = { version = "1.2", features = ["serde_support"] }
 nalgebra = "0.18"
 image = "0.23"
 bincode = "=1.2"
