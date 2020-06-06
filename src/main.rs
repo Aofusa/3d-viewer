@@ -1,15 +1,15 @@
-use artichoke_backend::prelude::core::*;
-use artichoke_backend::prelude::*;
+extern crate uuid;
 
-fn example() -> Result<(), Exception> {
-    let mut interp = artichoke_backend::interpreter()?;
-    let result = interp.eval(b"10 * 10")?;
-    let result = result.try_into::<i64>(&interp)?;
-    assert_eq!(100, result);
-    Ok(())
-}
+mod component;
+mod driver;
+
+use component::id::{IdInteractor};
+use driver::uuid_driver::UuidRepository;
 
 fn main() {
-    example();
-    println!("Hello, world!");
+    let id_repository = UuidRepository {};
+    let id_interactor = IdInteractor { id_repository };
+    let id = id_interactor.generate();
+
+    println!("{:?}", id);
 }

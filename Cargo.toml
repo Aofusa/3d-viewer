@@ -6,6 +6,14 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "graphics"
+path = "src/lib.rs"
+
+[[bin]]
+name = "graphics"
+path = "src/main.rs"
+
 [[example]]
 name="ruby"
 path="test/ruby.rs"
@@ -37,9 +45,11 @@ path="test/model.rs"
 test = true
 
 [dependencies]
+serde = "1"
+uuid = { version = "0.8", features = ["serde", "v4"], default-features = false }
+nalgebra = "0.18"
 image = "0.23"
 bincode = "=1.2"
-nalgebra = "0.18"
 arrayvec = "0.5"
 futures = "0.3"
 smallvec = "1"
